@@ -28,9 +28,6 @@ def fetch_pokemon(pokemon_id: int) -> dict:
         stat_name = stat['stat']['name']
         poke_attributes[stat_name] = stat['base_stat']
     
-    # TODO: THIS EVOLUTION CHAIN JSON IS A NESTED ARRAY STRUCTURE.
-    # WILL HAVE TO USE RECURSION TO CHECK THE "BRANCHES" FOR IF THE 
-    # CURRENT POKEMON IS PART OF THE "LEAF" OF THE STRUCTURE.
     species_data = requests.get(data['species']['url'])
     evo_chain_url = species_data.json()['evolution_chain']['url']
     evo_response = requests.get(evo_chain_url)

@@ -1,1 +1,1 @@
-Testing out Python ML libraries like pandas and scikit learn by grouping Gen 1 Pokemon into subgroups based on their stats. Uses API data from pokeAPI.
+Pokemon team composition picker. Uses a Kmeans model to group pokemon into 5 different archetypes based on base stats. Fetches data from PokeAPI to train model. Currently only supports Gen 1 mons.
